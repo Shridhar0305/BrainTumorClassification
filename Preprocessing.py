@@ -39,7 +39,7 @@ output_directory = "/Downloads/BrainTumorSegmentation/OutputImages"
 patch_size = (64, 64, 64)
 stride = (32, 32, 32)
 rotation_angles = [0, 90, 180, 270]
-data_points = []
+data = []
 labels = []
 
 for root, dirs, files in os.walk(input_directory):
@@ -62,10 +62,10 @@ for root, dirs, files in os.walk(input_directory):
                     rotated_patch = rotate(patch, angle, reshape=False)
 
                     # Append the original and rotated patches as pairs
-                    data_points.append(patch)
+                    data.append(patch)
                     labels.append(angle)
 
-                    data_points.append(rotated_patch)
+                    data.append(rotated_patch)
                     labels.append(angle)
 
 print("Data points and corresponding labels created.")
