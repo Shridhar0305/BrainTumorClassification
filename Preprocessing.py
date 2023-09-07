@@ -22,8 +22,8 @@ def extract_patches(image, patch_size, stride):
     return patches
 
     
-input_directory = "/kaggle/input"
-output_directory = "/kaggle/working"
+input_directory = "/Downloads/BrainTumorSegmentation/InputImages"
+output_directory = "/Downloads/BrainTumorSegmentation/OutputImages"
 patch_size = (64, 64, 64)
 stride = (32, 32, 32)
 
