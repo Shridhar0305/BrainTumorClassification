@@ -39,6 +39,8 @@ output_directory = "/Downloads/BrainTumorSegmentation/OutputImages"
 patch_size = (64, 64, 64)
 stride = (32, 32, 32)
 rotation_angles = [0, 90, 180, 270]
+data_points = []
+labels = []
 
 for root, dirs, files in os.walk(input_directory):
     for file in files:
@@ -87,7 +89,7 @@ class CustomDataset(Dataset):
         if self.transform:
             sample = self.transform(sample)
 
-        return sample, labeld
+        return sample, label
 
 # Define the neural network architecture for rotation prediction
 class RotationPredictionNet(nn.Module):
