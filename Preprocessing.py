@@ -2,7 +2,7 @@
 # and other issues that can cause differences in brightness on the MRI. These are cared for by employing SimpleITK N4 bias correction filter on all images. 
 
 # Next steps will include: patch extraction and kernel methods for SVM training for K fold training/80 % training-20% testing. This will then be further evaluated using evaluations. 
-
+# next steps include getting the feature vector and the labels and training the svm using kernel. 
 import SimpleITK as sitk
 import numpy as np
 import os
