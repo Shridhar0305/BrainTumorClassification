@@ -74,7 +74,7 @@ print("Data points and corresponding labels created.")
 
 class CustomDataset(Dataset):
     def __init__(self, data, labels, transform=None):
-        self.data = data_points  # List of data points (e.g., patches or images)
+        self.data = data  # List of data points (e.g., patches or images)
         self.labels = labels  # List of corresponding labels (e.g., rotation angles)
         self.transform = transform  # Optional data transformations (e.g., resizing, normalization)
 
